@@ -1,0 +1,30 @@
+Variable_assigning_task:
+  description: >
+    The user will be providing the code of any programming language with class defined {code},
+    according to the class your job is to assign the variables based on what type of class
+    is used.For example if the class is car the variables must be like BMW,Audi,Mercedes etc like any 
+    car names associated
+  expected_output: >
+    Modifying the code which is provided with the assigned variables name and return the modified code
+  
+
+Error_fixing_task:
+  description: >    
+    If there are any syntax, indentation and programming errors in the programming code after variable assigned,
+    solve all these errors and return the valid code.
+  expected_output: >
+    Return the code which free from all the errors.
+  context:
+    - variable_task
+
+Description_task:
+  description: >
+    Based on variables name assigned and error fixed give the description of everything that has been 
+    changed in the code.
+    {code}
+  expected_output: >
+    A few 6-8 lines description of what and all changes are done in the code.
+  context:
+    - variable_task
+    - error_task
+
